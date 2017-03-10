@@ -110,7 +110,7 @@ public class Grafica extends javax.swing.JFrame {
 
     private void casilla00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla00MouseClicked
         // TODO add your handling code here:
-        casilla00.setText("O");
+        
     }//GEN-LAST:event_casilla00MouseClicked
 
     /**

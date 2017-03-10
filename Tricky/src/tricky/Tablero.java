@@ -10,7 +10,9 @@ package tricky;
  * @author Estudiantes
  */
 public class Tablero {
-    int arreglo[];
+    int juego[][];
+    
+    
     
     
 }
