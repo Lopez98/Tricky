@@ -16,12 +16,19 @@ public class Grafica extends javax.swing.JFrame {
      */
     
     Jugador jugadorGrafico = new Jugador();
+    Tablero tableroGrafico = new Tablero();
+    
     int valor;
     boolean juego;
+    boolean triqui;
+    boolean resultado;
+    int posI;
+    int posJ;
     
     public Grafica() {
         initComponents();
         this.juego = true;
+        this.triqui = false;
     }
 
     /**
@@ -157,7 +164,9 @@ public class Grafica extends javax.swing.JFrame {
     private void casilla00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla00MouseClicked
         // TODO add your handling code here:
         valor = jugadorGrafico.marcar();
-        
+        posI = 0;
+        posJ = 0;
+                
         switch(valor){
             case 0:
                 casilla00.setText("O");
@@ -167,12 +176,18 @@ public class Grafica extends javax.swing.JFrame {
                 break;
             case 2:
                 this.juego = false;
+                break;
         }
+        casilla00.setEnabled(false);
+        
+        triqui = tableroGrafico.analizar(posI, posJ, valor);
     }//GEN-LAST:event_casilla00MouseClicked
 
     private void casilla01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla01MouseClicked
         // TODO add your handling code here:
         valor = jugadorGrafico.marcar();
+        posI = 0;
+        posJ = 1;
         
         switch(valor){
             case 0:
@@ -184,11 +199,16 @@ public class Grafica extends javax.swing.JFrame {
             case 2:
                 this.juego = false;
         }
+        casilla01.setEnabled(false);
+        
+        triqui = tableroGrafico.analizar(posI, posJ, valor);
     }//GEN-LAST:event_casilla01MouseClicked
 
     private void casilla02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla02MouseClicked
         // TODO add your handling code here:
         valor = jugadorGrafico.marcar();
+        posI = 0;
+        posJ = 2;
         
         switch(valor){
             case 0:
@@ -200,11 +220,16 @@ public class Grafica extends javax.swing.JFrame {
             case 2:
                 this.juego = false;
         }
+        casilla02.setEnabled(false);
+        
+        triqui = tableroGrafico.analizar(posI, posJ, valor);
     }//GEN-LAST:event_casilla02MouseClicked
 
     private void casilla10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla10MouseClicked
         // TODO add your handling code here:
         valor = jugadorGrafico.marcar();
+        posI = 1;
+        posJ = 0;
         
         switch(valor){
             case 0:
@@ -216,11 +241,16 @@ public class Grafica extends javax.swing.JFrame {
             case 2:
                 this.juego = false;
         }
+        casilla10.setEnabled(false);
+        
+        triqui = tableroGrafico.analizar(posI, posJ, valor);
     }//GEN-LAST:event_casilla10MouseClicked
 
     private void casilla11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla11MouseClicked
         // TODO add your handling code here:
         valor = jugadorGrafico.marcar();
+        posI = 1;
+        posJ = 1;
         
         switch(valor){
             case 0:
@@ -232,11 +262,16 @@ public class Grafica extends javax.swing.JFrame {
             case 2:
                 this.juego = false;
         }
+        casilla11.setEnabled(false);
+        
+        triqui = tableroGrafico.analizar(posI, posJ, valor);
     }//GEN-LAST:event_casilla11MouseClicked
 
     private void casilla12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla12MouseClicked
         // TODO add your handling code here:
         valor = jugadorGrafico.marcar();
+        posI = 1;
+        posJ = 2;
         
         switch(valor){
             case 0:
@@ -248,11 +283,16 @@ public class Grafica extends javax.swing.JFrame {
             case 2:
                 this.juego = false;
         }
+        casilla12.setEnabled(false);
+        
+        triqui = tableroGrafico.analizar(posI, posJ, valor);
     }//GEN-LAST:event_casilla12MouseClicked
 
     private void casilla20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla20MouseClicked
         // TODO add your handling code here:
         valor = jugadorGrafico.marcar();
+        posI = 2;
+        posJ = 0;
         
         switch(valor){
             case 0:
@@ -264,11 +304,16 @@ public class Grafica extends javax.swing.JFrame {
             case 2:
                 this.juego = false;
         }
+        casilla20.setEnabled(false);
+        
+        triqui = tableroGrafico.analizar(posI, posJ, valor);
     }//GEN-LAST:event_casilla20MouseClicked
 
     private void casilla21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla21MouseClicked
         // TODO add your handling code here:
         valor = jugadorGrafico.marcar();
+        posI = 2;
+        posJ = 1;
         
         switch(valor){
             case 0:
@@ -280,11 +325,16 @@ public class Grafica extends javax.swing.JFrame {
             case 2:
                 this.juego = false;
         }
+        casilla21.setEnabled(false);
+        
+        triqui = tableroGrafico.analizar(posI, posJ, valor);
     }//GEN-LAST:event_casilla21MouseClicked
 
     private void casilla22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla22MouseClicked
         // TODO add your handling code here:
         valor = jugadorGrafico.marcar();
+        posI = 2;
+        posJ = 2;
         
         switch(valor){
             case 0:
@@ -296,42 +346,28 @@ public class Grafica extends javax.swing.JFrame {
             case 2:
                 this.juego = false;
         }
+        casilla22.setEnabled(false);
+        
+        triqui = tableroGrafico.analizar(posI, posJ, valor);
     }//GEN-LAST:event_casilla22MouseClicked
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Grafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Grafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Grafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Grafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    boolean resultado(){
+        if(triqui && juego){
+            resultado = true;
         }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Grafica().setVisible(true);
+        if (triqui==false && juego==false){
+            resultado = false;
+        }else{
+            if (triqui && juego==false){
+                resultado = true;
             }
-        });
+        }
+        return resultado;
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton casilla00;

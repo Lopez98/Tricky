@@ -20,6 +20,7 @@ public class Main {
         Grafica juego = new Grafica();
         
         juego.setVisible(true);
+        
     }
     
 }
