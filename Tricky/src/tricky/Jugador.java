@@ -15,7 +15,7 @@ public class Jugador {
 
     public Jugador() {
         this.valor = 1;
-        this.turno = 1;
+        this.turno = 0;
     }
     
     int marcar(){
@@ -24,6 +24,8 @@ public class Jugador {
         if (turno < 10){
             if(turno%2==0){
                 valor = 0;
+            }else{
+                valor = 1;
             }
             return valor;
         }else{

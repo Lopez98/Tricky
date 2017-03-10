@@ -13,6 +13,4 @@ public class Tablero {
     int juego[][];
     
     
-    
-    
 }

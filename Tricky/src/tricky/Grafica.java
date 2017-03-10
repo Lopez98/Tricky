@@ -14,8 +14,14 @@ public class Grafica extends javax.swing.JFrame {
     /**
      * Creates new form Grafica
      */
+    
+    Jugador jugadorGrafico = new Jugador();
+    int valor;
+    boolean juego;
+    
     public Grafica() {
         initComponents();
+        this.juego = true;
     }
 
     /**
@@ -47,20 +53,60 @@ public class Grafica extends javax.swing.JFrame {
         });
 
         casilla01.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        casilla01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                casilla01MouseClicked(evt);
+            }
+        });
 
         casilla02.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        casilla02.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                casilla02MouseClicked(evt);
+            }
+        });
 
         casilla10.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        casilla10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                casilla10MouseClicked(evt);
+            }
+        });
 
         casilla20.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        casilla20.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                casilla20MouseClicked(evt);
+            }
+        });
 
         casilla11.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        casilla11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                casilla11MouseClicked(evt);
+            }
+        });
 
         casilla12.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        casilla12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                casilla12MouseClicked(evt);
+            }
+        });
 
         casilla21.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        casilla21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                casilla21MouseClicked(evt);
+            }
+        });
 
         casilla22.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
+        casilla22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                casilla22MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,8 +156,147 @@ public class Grafica extends javax.swing.JFrame {
 
     private void casilla00MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla00MouseClicked
         // TODO add your handling code here:
+        valor = jugadorGrafico.marcar();
         
+        switch(valor){
+            case 0:
+                casilla00.setText("O");
+                break;
+            case 1:
+                casilla00.setText("X");
+                break;
+            case 2:
+                this.juego = false;
+        }
     }//GEN-LAST:event_casilla00MouseClicked
+
+    private void casilla01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla01MouseClicked
+        // TODO add your handling code here:
+        valor = jugadorGrafico.marcar();
+        
+        switch(valor){
+            case 0:
+                casilla01.setText("O");
+                break;
+            case 1:
+                casilla01.setText("X");
+                break;
+            case 2:
+                this.juego = false;
+        }
+    }//GEN-LAST:event_casilla01MouseClicked
+
+    private void casilla02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla02MouseClicked
+        // TODO add your handling code here:
+        valor = jugadorGrafico.marcar();
+        
+        switch(valor){
+            case 0:
+                casilla02.setText("O");
+                break;
+            case 1:
+                casilla02.setText("X");
+                break;
+            case 2:
+                this.juego = false;
+        }
+    }//GEN-LAST:event_casilla02MouseClicked
+
+    private void casilla10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla10MouseClicked
+        // TODO add your handling code here:
+        valor = jugadorGrafico.marcar();
+        
+        switch(valor){
+            case 0:
+                casilla10.setText("O");
+                break;
+            case 1:
+                casilla10.setText("X");
+                break;
+            case 2:
+                this.juego = false;
+        }
+    }//GEN-LAST:event_casilla10MouseClicked
+
+    private void casilla11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla11MouseClicked
+        // TODO add your handling code here:
+        valor = jugadorGrafico.marcar();
+        
+        switch(valor){
+            case 0:
+                casilla11.setText("O");
+                break;
+            case 1:
+                casilla11.setText("X");
+                break;
+            case 2:
+                this.juego = false;
+        }
+    }//GEN-LAST:event_casilla11MouseClicked
+
+    private void casilla12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla12MouseClicked
+        // TODO add your handling code here:
+        valor = jugadorGrafico.marcar();
+        
+        switch(valor){
+            case 0:
+                casilla12.setText("O");
+                break;
+            case 1:
+                casilla12.setText("X");
+                break;
+            case 2:
+                this.juego = false;
+        }
+    }//GEN-LAST:event_casilla12MouseClicked
+
+    private void casilla20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla20MouseClicked
+        // TODO add your handling code here:
+        valor = jugadorGrafico.marcar();
+        
+        switch(valor){
+            case 0:
+                casilla20.setText("O");
+                break;
+            case 1:
+                casilla20.setText("X");
+                break;
+            case 2:
+                this.juego = false;
+        }
+    }//GEN-LAST:event_casilla20MouseClicked
+
+    private void casilla21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla21MouseClicked
+        // TODO add your handling code here:
+        valor = jugadorGrafico.marcar();
+        
+        switch(valor){
+            case 0:
+                casilla21.setText("O");
+                break;
+            case 1:
+                casilla21.setText("X");
+                break;
+            case 2:
+                this.juego = false;
+        }
+    }//GEN-LAST:event_casilla21MouseClicked
+
+    private void casilla22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_casilla22MouseClicked
+        // TODO add your handling code here:
+        valor = jugadorGrafico.marcar();
+        
+        switch(valor){
+            case 0:
+                casilla22.setText("O");
+                break;
+            case 1:
+                casilla22.setText("X");
+                break;
+            case 2:
+                this.juego = false;
+        }
+    }//GEN-LAST:event_casilla22MouseClicked
 
     /**
      * @param args the command line arguments
